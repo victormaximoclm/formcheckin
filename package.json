@@ -1,0 +1,40 @@
+{
+  "name": "clickup-oauth-checkin",
+  "version": "1.0.0",
+  "description": "Sistema de Check-in com OAuth ClickUp - Case Study",
+  "main": "index.html",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js",
+    "static": "http-server -p 3000 -c-1 --cors",
+    "build": "echo 'Build não necessário - projeto estático'",
+    "test": "echo 'Testes não configurados'",
+    "postinstall": "echo 'Dependências instaladas com sucesso'"
+  },
+  "keywords": [
+    "clickup",
+    "oauth",
+    "checkin",
+    "case-study",
+    "authentication"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.6.1",
+    "express": "^4.18.2",
+    "node-fetch": "^2.6.7"
+  },
+  "devDependencies": {
+    "http-server": "^14.1.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "bugs": {
+    "url": ""
+  },
+  "homepage": ""
+}

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Check-in System</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/png" href="images/hpsm_favicon.png">
+</head>
+<body>
+    <div class="formbold-main-wrapper">
+        <div class="formbold-form-wrapper">
+            <!-- Seção esquerda para imagem -->
+            <div class="form-left-section">
+                <div class="image-overlay">
+                    <!-- Aqui você pode substituir pela sua imagem -->
+                    <img src="images/formHPSM.png" alt="Check-in System">
+                </div>
+            </div>
+            
+
+
+
+
+
+            <!-- Seção direita para formulário -->
+            <div class="form-right-section">
+                <!-- Tela de Login -->
+                <div id="login-screen" class="login-screen">
+                    <h1 class="form-title">🔐 Login Check-in</h1>
+                    <p class="login-description">Faça login com sua conta ClickUp para acessar o sistema de check-in.</p>
+                    <button type="button" class="formbold-btn login-btn" id="login-btn" onclick="fazerLogin()">
+                        <img src="images/clickup_logo.png" alt="ClickUp" class="login-icon"> Entrar
+                    </button>
+                    <div class="login-info">
+                        <p>⚠️ Apenas usuários autorizados podem acessar este sistema.</p>
+                    </div>
+                </div>
+
+                <!-- Tela do Formulário (inicialmente oculta) -->
+                <div id="form-screen" class="form-screen" style="display: none;">
+                    <div class="user-info " style="text-align: center; justify-content: center; align-items: center;">
+                        <button type="button" class="logout-btn" id="logout-btn">🚪 Sair</button>
+                    </div>
+                    
+                    <form id="formulario">
+                        <h1 class="form-title">Presença Diária/Prorrogação</h1>
+
+                    <div class="formbold-mb-5">
+                        <label for="guest" class="formbold-form-label">
+                            Paciente <span style="color: red;">*</span>
+                        </label>
+                        <div class="custom-dropdown">
+                            <div class="dropdown-input" id="dropdown-input">
+                                <input type="text" id="guest-search" class="formbold-form-input" placeholder="Selecione um paciente" readonly>
+                                <span class="dropdown-arrow">▼</span>
+                            </div>
+                            <div class="dropdown-options" id="dropdown-options">
+                                <div class="search-container">
+                                    <input type="text" id="filter-input" placeholder="Filtrar opções...">
+                                </div>
+                                <div class="options-list" id="options-list">
+                                    <!-- Opções serão carregadas dinamicamente -->
+                                </div>
+                            </div>
+                            <input type="hidden" id="guest" name="guest" required>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-wrap formbold--mx-3">
+                        <div class="w-full sm:w-half formbold-px-3">
+                            <div class="formbold-mb-5 w-full">
+                                <label for="date" class="formbold-form-label"> Data <span style="color: red;">*</span> </label>
+                                <input
+                                    type="date"
+                                    name="date"
+                                    id="date"
+                                    class="formbold-form-input"
+                                    required
+                                />
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <button type="submit" class="formbold-btn">Enviar</button>
+                    </div>
+                </form>
+                    </div> <!-- Fechamento da div form-screen -->
+                </div> <!-- Fechamento da div form-right-section -->
+            </div> <!-- Fechamento da div formbold-form-wrapper -->
+        </div> <!-- Fechamento da div formbold-main-wrapper -->
+
+
+
+
+    <!-- Modal de Sucesso -->
+    <div id="successModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header success">
+                <h2>✅ Sucesso!</h2>
+                <span class="close" id="close-success-modal">&times;</span>
+            </div>
+            <div class="modal-body">
+                <p>Check-in realizado com sucesso!</p>
+                <p>Os dados estão sendo processados no sistema.</p>
+            </div>
+            <div class="modal-footer">
+                <button class="modal-btn success" id="close-success-modal-btn">OK</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal de Erro -->
+    <div id="errorModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header error">
+                <h2>❌ Erro!</h2>
+                <span class="close" id="close-error-modal">&times;</span>
+            </div>
+            <div class="modal-body">
+                <p id="errorMessage">Tente novamente mais tarde ou entre em contato com o suporte.</p>
+            </div>
+            <div class="modal-footer">
+                <button class="modal-btn error" id="close-error-modal-btn">Tentar Novamente</button>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script src="config.js"></script>
+    <script src="auth.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
