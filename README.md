@@ -115,23 +115,6 @@ WEBHOOK_URL: "https://seu-webhook.com/endpoint"
 
 Ou configure via variável de ambiente no servidor.
 
-## 📁 Estrutura do Projeto
-
-```
-clickup-oauth-checkin/
-├── index.html              # Página principal
-├── auth-callback.html      # Página de callback OAuth
-├── config.js              # Configurações da aplicação
-├── auth.js                # Sistema de autenticação OAuth
-├── script.js              # Lógica principal da aplicação
-├── styles.css             # Estilos CSS
-├── server.js              # Servidor Express (proxy OAuth)
-├── package.json           # Dependências do projeto
-└── images/                # Imagens e ícones
-    ├── clickup_logo.png
-    └── hpsm_favicon.png
-```
-
 ## 🔐 Fluxo de Autenticação
 
 1. **Login**: Usuário clica em "Entrar com ClickUp"
