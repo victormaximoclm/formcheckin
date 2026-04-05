@@ -30,7 +30,6 @@ Este projeto resolve:
 
 ## 🖼️ Preview
 
-> Adicione aqui prints do sistema (login, formulário, integração)
 
 ---
 
